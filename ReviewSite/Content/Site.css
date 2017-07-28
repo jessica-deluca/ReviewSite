@@ -22,3 +22,30 @@ select,
 textarea {
     max-width: 280px;
 }
+
+/* NAVBAR */
+#navLogo {
+    width:150px;
+    padding-top: 7px;
+}
+
+#navBar.navbar.navbar-inverse.navbar-fixed-top {
+    background-color:#FFFFFF;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+#navBar a {
+    color:#000000;
+}
+
+span.icon-bar {
+    border:1px solid #000000;
+
+/*#navBar a:hover {
+    background:none;
+}
+
+/*button.navbar-toggle {
+    border:1px solid #000000;
+}*/*/
