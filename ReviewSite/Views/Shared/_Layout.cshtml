@@ -8,7 +8,7 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top" id="navBar">
+<div class="navbar navbar-fixed-top" id="navBar">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -28,26 +28,13 @@
         </div>
     </div>
 
-    @*<nav class="navbar navbar-static-top" id="navvy">
-        <div class="container">
-            <div class="navbar-header">*@
-                @*<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+    @*<div class="container body-content">*@
 
-            <div id="navbar" class="navbar-collapse collapse">*@
-
-
-
-
-
-    <div class="container body-content">
+    <div>
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p class="container" style="text-align:right">Jessica DeLuca Review Site Project</p>
         </footer>
     </div>
 
