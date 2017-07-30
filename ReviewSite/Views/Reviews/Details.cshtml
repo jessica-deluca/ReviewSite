@@ -1,66 +1,52 @@
 ﻿@model ReviewSite.Models.Review
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Review Details";
 }
 
-<h2>Details</h2>
+<hr style="margin-bottom: 0px;" />
 
-<div>
-    <h4>Review</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Category.CategoryName)
-        </dt>
+<div class="reviewDetailsView">
 
-        <dd>
-            @Html.DisplayFor(model => model.Category.CategoryName)
-        </dd>
+    <div class="container">
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ReviewTitle)
-        </dt>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding-left: 0px; padding-right: 0px;">
 
-        <dd>
-            @Html.DisplayFor(model => model.ReviewTitle)
-        </dd>
+            <h1 id="reviewDetailsName">
+                @Html.DisplayFor(model => model.ReviewTitle)
+            </h1>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ReviewContent)
-        </dt>
+            <h4 id="reviewDetailsScore">
+                Score: @Html.DisplayFor(model => model.ReviewScore)
+            </h4>
 
-        <dd>
-            @Html.DisplayFor(model => model.ReviewContent)
-        </dd>
+            <h4 id="reviewDetailsCategory">
+                Category: @Html.DisplayFor(model => model.Category.CategoryName)
+            </h4>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.PublishedDate)
-        </dt>
+            <h4 id="reviewDetailsPublishedDate">
+                Published: @Html.DisplayFor(model => model.PublishedDate)
+            </h4>
 
-        <dd>
-            @Html.DisplayFor(model => model.PublishedDate)
-        </dd>
+            <h4 id="reviewDetailsAuthor">
+                Author: @Html.DisplayFor(model => model.ReviewAuthor)
+            </h4>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ReviewAuthor)
-        </dt>
+            <h4 class="reviewDetailsContentBox" id="reviewDetailsContent">
+                "@Html.DisplayFor(model => model.ReviewContent)"
+            </h4>
 
-        <dd>
-            @Html.DisplayFor(model => model.ReviewAuthor)
-        </dd>
+        </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ReviewScore)
-        </dt>
+    </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.ReviewScore)
-        </dd>
-
-    </dl>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ReviewID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+
+<div class="container" style="padding-top: 15px;">
+
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ReviewID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+
+</div>

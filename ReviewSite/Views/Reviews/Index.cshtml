@@ -1,39 +1,48 @@
 ﻿@model IEnumerable<ReviewSite.Models.Review>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Reviews";
 }
+
 <hr />
-@*<h2>Index</h2>*@
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<div class="container" style="text-align:center;">
 
-<div class="row">
-    @foreach (var item in Model)
-    {
-        <div class="col-md-4">
+    <h2 class="reviewsTitle">Reviews</h2>
 
-            <img src="~/Content/images/tripadvisor-icon.png" />
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
 
-            <h1 id="reviewName">
-                "@Html.DisplayFor(modelItem => item.ReviewTitle)"
-            </h1>
+    <div class="row reviewsContent">
 
-            <h4 id="reviewScore">
-                Score: @Html.DisplayFor(modelItem => item.ReviewScore)
-            </h4>
+        @foreach (var item in Model)
+        {
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 reviews" style="width: 272px; height: 262px;">
 
-            <h4 id="reviewCategory">
-                Category: @Html.DisplayFor(modelItem => item.Category.CategoryName)
-            </h4>
+                    <img class="img-responsive center-block" id="reviewsIcon" src="~/Content/images/tripadvisor-icon.png" />
 
-            <p>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ReviewID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.ReviewID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.ReviewID })
-            </p>
-        </div>
-    }
+                    <h1 id="reviewName">
+                        "@Html.DisplayFor(modelItem => item.ReviewTitle)"
+                    </h1>
+
+                    <h4 id="reviewScore">
+                        Score: @Html.DisplayFor(modelItem => item.ReviewScore)
+                    </h4>
+
+                    <h4 id="reviewCategory">
+                        Category: @Html.DisplayFor(modelItem => item.Category.CategoryName)
+                    </h4>
+
+                    <p>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.ReviewID }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.ReviewID }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.ReviewID })
+                    </p>
+
+            </div>
+        }
+
+    </div>
+
 </div>

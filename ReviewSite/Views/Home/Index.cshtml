@@ -3,9 +3,9 @@
 }
 
 <div class="jumbotron mainSec">
-    <h1 class="container" id="homeTitle">Get Travel Reviews</h1>
-    <p class="container" id="homeDescription">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p class="container" id="homeButton"><a href="http://asp.net" class="btn btn-primary btn-lg homeCTA">Find Reviews Now &raquo;</a></p>
-</div>
+    <h1 class="container" id="homeTitle" style="margin-top: 10px;">Get Travel Reviews</h1>
+    <p class="container homeTextBox" id="homeDescription" style="margin-bottom: 30px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
-@*@Html.ActionLink("Reviews", "Index", "Reviews")*@
+    @*Link "Find Reviews Now" button to Reviews Index*@
+    <p class="container" id="homeButton" style="margin-top: 50px;"><a href="@Url.Action("Index", null, new { area = string.Empty, controller = "Reviews" }, Request.Url.Scheme)" class="btn btn-primary btn-lg homeCTA"><span>Find Reviews Now &raquo;</span></a></p>
+</div>
